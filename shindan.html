@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>観葉植物診断</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>あなたにぴったりの観葉植物診断</h1>
+    <form onsubmit="return false;">
+        <label>
+            質問1: どこに置きたい？
+            <select id="answerQuestion1">
+                <option value="玄関">玄関</option>
+                <option value="トイレ">トイレ</option>
+                <option value="寝室">寝室</option>
+                <option value="リビング">リビング</option>
+            </select>
+        </label>
+        <label>
+            質問2: 置く場所の方角は？
+            <select id="answerQuestion2">
+                <option value="北">北</option>
+                <option value="東">東</option>
+                <option value="西">西</option>
+                <option value="南">南</option>
+            </select>
+        </label>
+        <label>
+            質問3: あなたがもっとも求めるものは？
+            <select id="answerQuestion3">
+                <option value="お金">お金</option>
+                <option value="愛">愛</option>
+                <option value="健康">健康</option>
+                <option value="魔除け">魔除け</option>
+            </select>
+        </label>
+        <button onclick="startPersonalityTest()">診断する</button>
+    </form>
+
+    <script>
+        const startPersonalityTest = () => {
+            const answerQuestion1 = document.getElementById("answerQuestion1").value;
+            const answerQuestion2 = document.getElementById("answerQuestion2").value;
+            const answerQuestion3 = document.getElementById("answerQuestion3").value;
+
+            let personalityType = "";
+
+            if (answerQuestion1 === "玄関" && answerQuestion2 === "北" && answerQuestion3 === "お金") {
+                personalityType = "パキラ";
+            } else if (answerQuestion1 === "寝室" && answerQuestion2 === "南" && answerQuestion3 === "愛") {
+                personalityType = "モンステラ";
+            } else if (answerQuestion1 === "トイレ" && answerQuestion2 === "東" && answerQuestion3 === "健康") {
+                personalityType = "テーブルヤシ";
+            } else if (answerQuestion1 === "リビング" && answerQuestion2 === "西" && answerQuestion3 === "魔除け") {
+                personalityType = "ウンベラータ";
+            } else if (answerQuestion1 === "玄関" && answerQuestion2 === "南" && answerQuestion3 === "お金") {
+                personalityType = "サンスベリア";
+            } else if (answerQuestion1 === "トイレ" && answerQuestion2 === "西" && answerQuestion3 === "健康") {
+                personalityType = "テーブルヤシ";
+            } else {
+                personalityType = "ポトス";
+            }
+
+            alert(`診断結果: ${personalityType}`);
+        };
+    </script>
+</body>
+</html>
