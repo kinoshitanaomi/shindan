@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>観葉植物診断</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: 600px) {
+            form {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>あなたにぴったりの観葉植物診断</h1>
+    <form onsubmit="return false;">
+        <label>
+            質問1: どこに置きたい？
+            <select id="answerQuestion1">
+                <option value="玄関">玄関</option>
+                <option value="トイレ">トイレ</option>
+                <option value="寝室">寝室</option>
+                <option value="リビング">リビング</option>
+            </select>
+        </label>
+        <label>
+            質問2: 置く場所の方角は？
+            <select id="answerQuestion2">
+                <option value="北">北</option>
+                <option value="東">東</option>
+                <option value="西">西</option>
+                <option value="南">南</option>
+            </select>
+        </label>
+        <label>
+            質問3: あなたがもっとも求めるものは？
+            <select id="answerQuestion3">
+                <option value="お金">お金</option>
+                <option value="愛">愛</option>
+                <option value="健康">健康</option>
+                <option value="魔除け">魔除け</option>
+            </select>
+        </label>
+        <button onclick="startPersonalityTest()">診断する</button>
+    </form>
+
+    <script>
+        const startPersonalityTest = () => {
+            // ... (unchanged JavaScript code)
+        };
+    </script>
+</body>
+</html>
