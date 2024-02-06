@@ -1,81 +1,30 @@
+<!-- チャットボットプログラムの雛形 -->
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>観葉植物診断</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        select, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-        }
-
-        @media (min-width: 600px) {
-            form {
-                padding: 40px;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>性格診断チャットボット</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
-    <h1>あなたにぴったりの観葉植物診断</h1>
-    <form onsubmit="return false;">
-        <label>
-            質問1: どこに置きたい？
-            <select id="answerQuestion1">
-                <option value="玄関">玄関</option>
-                <option value="トイレ">トイレ</option>
-                <option value="寝室">寝室</option>
-                <option value="リビング">リビング</option>
-            </select>
-        </label>
-        <label>
-            質問2: 置く場所の方角は？
-            <select id="answerQuestion2">
-                <option value="北">北</option>
-                <option value="東">東</option>
-                <option value="西">西</option>
-                <option value="南">南</option>
-            </select>
-        </label>
-        <label>
-            質問3: あなたがもっとも求めるものは？
-            <select id="answerQuestion3">
-                <option value="お金">お金</option>
-                <option value="愛">愛</option>
-                <option value="健康">健康</option>
-                <option value="魔除け">魔除け</option>
-            </select>
-        </label>
-        <button onclick="startPersonalityTest()">診断する</button>
-    </form>
+    <style>
+        /* 追加のスタイリングをここに記述 */
+    </style>
 
-    <script>
-        const startPersonalityTest = () => {
-            // ... (unchanged JavaScript code)
-        };
-    </script>
+    <div class="container">
+        <h1 class="title">性格診断チャットボット</h1>
+        <div class="chat-box">
+            <div class="message">
+                <div class="message-content">性格診断を始めましょう！</div>
+            </div>
+        </div>
+        <div class="input-box">
+            <input id="user-input" class="input" type="text" placeholder="Type your answer">
+            <button id="send-button" class="button is-primary">Send</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
